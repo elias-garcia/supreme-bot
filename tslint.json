@@ -19,6 +19,7 @@
 			"object-destructuring",
 			"array-destructuring"
 		],
+		"strict-boolean-expressions": true,
 		"no-any": true,
 		"interface-name": false,
 		"object-literal-sort-keys": false,

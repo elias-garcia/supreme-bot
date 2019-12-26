@@ -1,5 +1,5 @@
 import * as app from "./app/app";
-import { logger } from "./app/logging/logger";
+import { logger } from "./app/logging";
 
 (async () => {
 	try {

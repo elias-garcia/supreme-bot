@@ -1,15 +1,16 @@
+import { AccountCountry } from "./account-country.type";
 import { AccountCreditCardType } from "./account-credit-card-type.type";
 
-interface Address {
+export interface AccountAddress {
 	firstLine: string;
 	secondLine?: string;
 	thirdLine?: string;
 	postcode: string;
 	city: string;
-	country: string;
+	country: AccountCountry;
 }
 
-interface CreditCard {
+export interface AccountCreditCard {
 	type: AccountCreditCardType;
 	number: string;
 	month: string;
@@ -17,10 +18,10 @@ interface CreditCard {
 	CVV: string;
 }
 
-export interface Account {
+export interface AccountConfig {
 	fullName: string;
 	email: string;
 	phone: string;
-	address: Address;
-	creditCard: CreditCard;
+	address: AccountAddress;
+	creditCard: AccountCreditCard;
 }
