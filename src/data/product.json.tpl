@@ -1,0 +1,6 @@
+{
+	"category": "",
+	"keywords": "",
+	"color": "",
+	"size": ""
+}

@@ -3,3 +3,7 @@ node_modules
 
 # Build
 dist
+
+# Data
+src/data/account.json
+src/data/product.json

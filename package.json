@@ -4,7 +4,12 @@
 	"description": "",
 	"main": "dist/index.js",
 	"scripts": {
-		"build": "tsc "
+		"prebuild": "rm -rf dist",
+		"build": "tsc",
+		"lint": "tslint --project .",
+		"lint:fix": "npm run lint -- --fix",
+		"start": "node ./dist/index.js",
+		"start:dev": "nodemon"
 	},
 	"repository": {
 		"type": "git",
@@ -17,10 +22,18 @@
 	},
 	"homepage": "https://github.com/elias-garcia/supreme-bot#readme",
 	"dependencies": {
-		"puppeteer": "^2.0.0"
+		"pino": "^5.15.0",
+		"pino-pretty": "^3.5.0",
+		"puppeteer": "^2.0.0",
+		"yup": "^0.28.0"
 	},
 	"devDependencies": {
+		"@types/pino": "^5.15.1",
 		"@types/puppeteer": "^2.0.0",
+		"@types/yup": "^0.26.27",
+		"nodemon": "^2.0.2",
+		"ts-node": "^8.5.4",
+		"tslint": "^5.20.1",
 		"typescript": "^3.7.4"
 	}
 }
