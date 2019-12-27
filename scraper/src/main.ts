@@ -1,4 +1,4 @@
-import * as app from "./app/app";
+import * as app from "./app";
 import { logger } from "./app/logging";
 
 (async () => {

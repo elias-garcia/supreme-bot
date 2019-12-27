@@ -1,0 +1,39 @@
+{
+	"name": "supreme-bot",
+	"version": "1.0.0",
+	"description": "",
+	"main": "dist/main.js",
+	"scripts": {
+		"prebuild": "rm -rf dist",
+		"build": "tsc",
+		"lint": "tslint --project .",
+		"lint:fix": "npm run lint -- --fix",
+		"start": "node ./dist/main.js",
+		"start:dev": "nodemon"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/elias-garcia/supreme-bot.git"
+	},
+	"author": "elias-garcia",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/elias-garcia/supreme-bot/issues"
+	},
+	"homepage": "https://github.com/elias-garcia/supreme-bot#readme",
+	"dependencies": {
+		"pino": "^5.15.0",
+		"pino-pretty": "^3.5.0",
+		"puppeteer": "^2.0.0",
+		"yup": "^0.28.0"
+	},
+	"devDependencies": {
+		"@types/pino": "^5.15.1",
+		"@types/puppeteer": "^2.0.0",
+		"@types/yup": "^0.26.27",
+		"nodemon": "^2.0.2",
+		"ts-node": "^8.5.4",
+		"tslint": "^5.20.1",
+		"typescript": "^3.7.4"
+	}
+}

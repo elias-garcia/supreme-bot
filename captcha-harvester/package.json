@@ -2,13 +2,13 @@
 	"name": "supreme-bot",
 	"version": "1.0.0",
 	"description": "",
-	"main": "dist/index.js",
+	"main": "dist/main.js",
 	"scripts": {
 		"prebuild": "rm -rf dist",
 		"build": "tsc",
 		"lint": "tslint --project .",
 		"lint:fix": "npm run lint -- --fix",
-		"start": "node ./dist/index.js",
+		"start": "node ./dist/main.js",
 		"start:dev": "nodemon"
 	},
 	"repository": {
@@ -22,15 +22,18 @@
 	},
 	"homepage": "https://github.com/elias-garcia/supreme-bot#readme",
 	"dependencies": {
+		"dotenv": "^8.2.0",
+		"express": "^4.17.1",
+		"express-handlebars": "^3.1.0",
 		"pino": "^5.15.0",
-		"pino-pretty": "^3.5.0",
-		"puppeteer": "^2.0.0",
-		"yup": "^0.28.0"
+		"pino-pretty": "^3.5.0"
 	},
 	"devDependencies": {
+		"@types/dotenv": "^8.2.0",
+		"@types/express": "^4.17.2",
+		"@types/express-handlebars": "^3.1.0",
+		"@types/node": "^13.1.0",
 		"@types/pino": "^5.15.1",
-		"@types/puppeteer": "^2.0.0",
-		"@types/yup": "^0.26.27",
 		"nodemon": "^2.0.2",
 		"ts-node": "^8.5.4",
 		"tslint": "^5.20.1",

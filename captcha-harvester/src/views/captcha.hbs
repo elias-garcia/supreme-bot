@@ -1,0 +1,15 @@
+<script>
+	window.recaptchaCallback = function () {
+		var recaptchaToken = document.querySelector('{{ recaptchaResponseSelector }}').value;
+
+		console.log(recaptchaToken);
+	}
+</script>
+<script src="https://www.google.com/recaptcha/api.js"
+				async
+				defer>
+</script>
+<div class="g-recaptcha"
+		 data-sitekey="{{ recaptchaSiteKey }}"
+		 data-callback="recaptchaCallback">
+</div>
