@@ -7,19 +7,19 @@ import {
 	RECAPTCHA_RESPONSE_SELECTOR,
 	RECAPTCHA_SITE_KEY,
 	VIEW_ENGINE,
-	VIEW_ENGINE_PROPERTY_KEY,
 	VIEWS_PATH,
-	VIEWS_PROPERTY_KEY,
 } from "./app.constants";
+import { getConfig } from "./config";
 import { errorHandler } from "./error-handling";
 import { logger } from "./logging";
 
 export function run(): void {
+	const config = getConfig();
 	const app = express();
 
 	app.engine(VIEW_ENGINE, expressHandlebars({ extname: VIEW_ENGINE }));
-	app.set(VIEW_ENGINE_PROPERTY_KEY, VIEW_ENGINE);
-	app.set(VIEWS_PROPERTY_KEY, path.join(__dirname, VIEWS_PATH));
+	app.set("view engine", VIEW_ENGINE);
+	app.set("views", path.join(__dirname, VIEWS_PATH));
 
 	app.get("/", (req: Request, res: Response) => {
 		return res.render("captcha", {
@@ -30,7 +30,7 @@ export function run(): void {
 
 	app.use(errorHandler);
 
-	app.listen(3000, () => {
-		logger.info("App running on port 3000");
+	app.listen(config.SERVER_PORT, () => {
+		logger.info(`App running on port ${config.SERVER_PORT}`);
 	});
 }

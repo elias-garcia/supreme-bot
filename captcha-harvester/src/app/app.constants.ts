@@ -1,7 +1,5 @@
 export const ENV_FILE_PATH = ".env";
 
-export const VIEW_ENGINE_PROPERTY_KEY = "view engine";
-export const VIEWS_PROPERTY_KEY = "views";
 export const VIEW_ENGINE = ".hbs";
 export const VIEWS_PATH = "../views";
 
